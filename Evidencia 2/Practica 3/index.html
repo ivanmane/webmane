@@ -1,11 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pokémon del Día</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div class="contenedor">
+        <header>
+            <h1>⚡ Pokémon del Día ⚡</h1>
+            <p class="subtitulo">Descubre tu Pokémon basado en la fecha de hoy</p>
+            <p class="fecha-actual" id="fechaActual"></p>
+        </header>
+
+        <div class="seccion-principal">
+            <button id="botonGenerar" class="boton-grande">
+                🎲 Descubrir Pokémon del Día
+            </button>
+        </div>
+
+        <div class="cargando" id="cargando">
+            <div class="pokebola-spinner"></div>
+            <p>Buscando en la Pokédex...</p>
+        </div>
+
+        <div class="mensaje-error" id="mensajeError"></div>
+
+        <div class="seccion-resultados" id="seccionResultados">
+            <div class="tarjeta-pokemon">
+                <div class="encabezado-pokemon">
+                    <h2 id="nombrePokemon"></h2>
+                    <span class="numero-pokemon" id="numeroPokemon"></span>
+                </div>
+
+                <div class="contenedor-imagen">
+                    <img id="imagenPokemon" class="imagen-pokemon" alt="Pokémon">
+                </div>
+
+                <div class="tipos-pokemon" id="tiposPokemon"></div>
+
+                <div class="info-pokemon">
+                    <div class="seccion-stats">
+                        <h3>📊 Estadísticas Base</h3>
+                        <div class="stats-lista" id="statsLista"></div>
+                    </div>
+
+                    <div class="seccion-habilidades">
+                        <h3>⚡ Habilidades</h3>
+                        <div class="habilidades-lista" id="habilidadesLista"></div>
+                    </div>
+
+                    <div class="seccion-datos">
+                        <h3>📖 Datos</h3>
+                        <div class="dato-item">
+                            <span class="dato-etiqueta">Altura:</span>
+                            <span class="dato-valor" id="altura"></span>
+                        </div>
+                        <div class="dato-item">
+                            <span class="dato-etiqueta">Peso:</span>
+                            <span class="dato-valor" id="peso"></span>
+                        </div>
+                        <div class="dato-item">
+                            <span class="dato-etiqueta">Experiencia Base:</span>
+                            <span class="dato-valor" id="experiencia"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Datos proporcionados por PokéAPI</p>
+            <p class="pie-curso">Práctica 3 - Fundamentos de Desarrollo Web</p>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
